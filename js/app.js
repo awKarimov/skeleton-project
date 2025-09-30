@@ -3,7 +3,6 @@ import {
   elParent,
   elLoader,
   errorMessage,
-  elData,
 } from "./html-elements.js";
 
 function init() {
