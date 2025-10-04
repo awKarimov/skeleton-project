@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cars</title>
+    <title>Demo</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/output.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -182,7 +182,92 @@
       ⚠️Xatolik sodir bo`ldi
     </h2>
 
+    <!-- Qo‘shish tugmasi -->
+    <button
+      id="openModalBtn"
+      class="bg-blue-600 hover:bg-blue-700 transition text-white py-2 px-4 rounded-lg ml-5 mb-5 shadow">
+      Qo`shish
+    </button>
+
+    <!-- Modal -->
+    <div
+      id="addCarModal"
+      class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50 z-50">
+      <div
+        class="bg-white p-6 rounded-2xl w-96 shadow-2xl relative animate-fadeIn">
+        <button
+          id="closeModalBtn"
+          class="absolute top-3 right-3 text-gray-500 hover:text-red-600 text-xl font-bold">
+          x
+        </button>
+
+        <h2 class="text-2xl font-bold text-center mb-4 text-gray-800">
+          Mashina qo`shish
+        </h2>
+
+        <form id="addCarForm" class="grid gap-3">
+          <input
+            type="text"
+            name="name"
+            placeholder="Nomi"
+            required
+            class="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none" />
+
+          <input
+            type="text"
+            name="description"
+            placeholder="Tavsif"
+            required
+            class="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none" />
+
+          <input
+            type="number"
+            name="year"
+            placeholder="Yili"
+            required
+            class="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none" />
+
+          <input
+            type="text"
+            name="acceleration"
+            placeholder="Tezlanishi (masalan: 3.5s)"
+            required
+            class="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none" />
+
+          <input
+            type="number"
+            name="maxSpeed"
+            placeholder="Max tezligi"
+            required
+            class="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none" />
+
+          <input
+            type="number"
+            name="horsepower"
+            placeholder="Ot kuchi"
+            required
+            class="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none" />
+
+          <input
+            type="text"
+            name="colorName"
+            placeholder="Rangi"
+            required
+            class="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none" />
+
+          <button
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 transition text-white py-2 rounded-lg shadow">
+            Qo`shish
+          </button>
+        </form>
+      </div>
+    </div>
+
     <div class="gap-5 ml-5" id="parent"></div>
+    <ul
+      id="toastContainer"
+      class="flex flex-col gap-2 absolute top-5 right-5"></ul>
 
     <template id="cardTemp">
       <div class="card w-96 bg-base-100 shadow-sm">
@@ -194,8 +279,16 @@
           <p id="acceleration"></p>
           <p id="horesePower"></p>
           <p id="colorName"></p>
+          <button type="button" class="delete-btn">Delete</button>
         </div>
       </div>
+    </template>
+
+    <template id="toastTemp">
+      <li class="">
+        <p></p>
+        <button class="close">x</button>
+      </li>
     </template>
     <script type="module" src="./js/app.js"></script>
   </body>
