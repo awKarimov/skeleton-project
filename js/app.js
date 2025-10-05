@@ -114,7 +114,7 @@ elAddCarForm.addEventListener("submit", (e) => {
   const newCar = {
     name: formData.get("name"),
     description: formData.get("description"),
-    year: +formData.get("year"),
+    year: formData.get("year"),
     acceleration: formData.get("acceleration"),
     maxSpeed: +formData.get("maxSpeed"),
     horsepower: +formData.get("horsepower"),
@@ -126,6 +126,8 @@ elAddCarForm.addEventListener("submit", (e) => {
 });
 
 elOpenModalBtn.addEventListener("click", () => {
+  console.log(1);
+
   elModal.classList.remove("hidden");
   elModal.classList.add("flex");
 });
