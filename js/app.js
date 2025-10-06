@@ -203,6 +203,11 @@ elPrevBtn.addEventListener("click", () => {
     page -= 1;
     elCurrentPage.innerText = page;
   }
+  if (skip === 0) {
+    elPrevBtn.classList.add("disabled:not-[]:");
+    elPrevBtn.classList.remove("enabled:not-[]:");
+  }
+  elParent.innerHTML = "";
   init();
 });
 
@@ -213,5 +218,6 @@ elNextBtn.addEventListener("click", () => {
     page += 1;
     elCurrentPage.innerText = page;
   }
+  elParent.innerHTML = "";
   init();
 });
