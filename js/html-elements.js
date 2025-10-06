@@ -7,6 +7,11 @@ const elTemplateContainer = document.getElementById("toastTemplate");
 const elModal = document.getElementById("addCarModal");
 const elOpenModalBtn = document.getElementById("openModalBtn");
 const elCloseModalBtn = document.getElementById("closeModalBtn");
+const elAddCard = document.getElementById("addCard");
+const elAddCarForm = document.getElementById("addCarForm");
+const elPrevBtn = document.getElementById("prevBtn");
+const elNextBtn = document.getElementById("nextBtn");
+const elCurrentPage = document.getElementById("currentPage");
 
 export {
   elCardTemp,
@@ -18,4 +23,9 @@ export {
   elModal,
   elOpenModalBtn,
   elCloseModalBtn,
+  elAddCard,
+  elAddCarForm,
+  elPrevBtn,
+  elNextBtn,
+  elCurrentPage,
 };
