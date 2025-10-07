@@ -211,7 +211,7 @@
     </div>
 
     <h2
-      class="hidden text-4xl text-white text-center font-bold mt-22"
+      class="hidden text-4xl text-white text-center font-bold"
       id="error-message">
       ⚠️Xatolik sodir bo`ldi
     </h2>
@@ -265,7 +265,7 @@
             required
             class="border border-black placeholder-black text-black rounded-lg px-3 py-2" />
           <input
-            type="number"
+            type="text"
             name="maxSpeed"
             placeholder="Max tezligi"
             required
@@ -314,19 +314,11 @@
           <p id="horsePower"></p>
           <p id="colorName"></p>
           <span>
-            <button type="button" class="delete-btn enabled:not-[]:">
-              Delete
-            </button>
-            <button type="button" class="edit-btn enabled">Edit</button>
+            <button type="button" class="delete-btn">Delete</button>
+            <button type="button" class="edit-btn">Edit</button>
           </span>
         </div>
       </div>
-    </template>
-
-    <template id="toastTemp">
-      <li>
-        <button class="close">x</button>
-      </li>
     </template>
     <script type="module" src="./js/app.js"></script>
   </body>
